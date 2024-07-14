@@ -1,37 +1,74 @@
-body{
+body {
     font-family: 'Poppins';
+    width: 100vw;
 }
-.container{
+
+.image {
+    height: 80vh;
+    width: 100%;
+    background: url('./images/nature2.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+    position: relative;
+    /* 
+      filter: brightness(0.6); */
+}
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    font-family: 'Poppins';
+    margin-top: 200px;
+    color: white;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.right {
+    color: white;
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.container {
     margin: auto;
     width: 80%;
-    height : auto;
+    height: auto;
     /* width : 96%; */
-    margin-top : 100px;
+    margin-top: 100px;
     padding-top: 20px;
-    padding-left: 50px ;
-    padding-right: 50px;  
+    padding-left: 50px;
+    padding-right: 50px;
     margin-bottom: 100px;
 }
-.sustainability{
+
+.sustainability {
     border-top: 5px solid black;
     box-shadow:
-    rgba(86, 221, 37, 0.42) 0px 60px 123px -25px,
-    rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
+        rgba(86, 221, 37, 0.42) 0px 60px 123px -25px,
+        rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
 }
-.susp{
+
+.susp {
     height: 100px;
-    padding-top:20px ;
+    padding-top: 20px;
     text-align: center;
-    background-color: rgb(198, 240, 198);;
+    background-color: rgb(198, 240, 198);
+    ;
     font-size: 3.5rem;
     padding-left: 20px;
-     font-family: 'Noto Sans'; 
+    font-family: 'Noto Sans';
 }
-.content{
+
+.content {
     font-size: 2.5rem;
     padding-left: 20px;
 }
-.goals{
+
+.goals {
     border-top: 5px solid green;
     font-size: 5rem;
     font-weight: 700;
@@ -39,51 +76,58 @@ body{
     color: green;
     background-color: rgb(198, 240, 198);
 }
-.outside{
+
+.outside {
     width: 100%;
     border-left: 5px solid green;
     border-right: 5px solid green;
     border-bottom: 5px solid green;
 }
-.allgoals{
+
+.allgoals {
     width: 100%;
     padding-bottom: 150px;
     display: flex;
     flex-wrap: wrap;
 }
-.imgrelatedinfo{
-   opacity: 0;
-   visibility: hidden;
-   font-weight: 700;
+
+.imgrelatedinfo {
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 700;
     font-size: 2rem;
     height: auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     z-index: 1;
 }
-.boxes{
+
+.boxes {
     width: 700px;
     margin-top: 50px;
     border-radius: 15px;
 }
-.boxes{
+
+.boxes {
     position: relative;
     overflow: hidden;
 
-  height: 100%;
-  transition: .5s all ease;
-  transform: rotateX(50deg) scale(0.7);
-  box-shadow:
-    rgba(16, 16, 15, 0.42) 0px 60px 123px -25px,
-    rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
+    height: 100%;
+    transition: .5s all ease;
+    transform: rotateX(50deg) scale(0.7);
+    box-shadow:
+        rgba(16, 16, 15, 0.42) 0px 60px 123px -25px,
+        rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
 }
-.images div{
+
+.images div {
     font-size: 5rem;
     font-weight: 700;
     position: relative;
     top: 270px;
     left: 200px;
 }
-.images{
+
+.images {
     color: white;
     font-size: 3rem;
     height: 700px;
@@ -92,25 +136,29 @@ body{
     border-top-right-radius: 15px;
     background-size: 100% 100%;
 }
+
 .boxes:hover {
     cursor: pointer;
     transform: rotateX(0deg) scale(1) translateY(80px);
-  
+
     transition: .5s all ease;
-    height:  60%;
+    height: 60%;
     z-index: 400;
-  }
-.boxes:hover .imgrelatedinfo{
+}
+
+.boxes:hover .imgrelatedinfo {
     /* display: block; */
     opacity: 1;
     visibility: visible;
-    
+
 }
-.boxes:hover .images{
- opacity: 0.3;
- height: 400px;
-  }
-  .knoww{
+
+.boxes:hover .images {
+    opacity: 0.3;
+    height: 400px;
+}
+
+.knoww {
     margin-top: 30px;
     margin-left: 25px;
     margin-bottom: 25px;
@@ -121,12 +169,14 @@ body{
     box-shadow: #555;
     padding-left: 35px;
     background-color: green;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.knoww:hover{
+
+.knoww:hover {
     background-color: #555;
 }
-.know-more{
+
+.know-more {
     text-decoration: none;
     color: white;
     font-size: 2.3rem;
@@ -134,7 +184,7 @@ body{
 
 
 /* changes */
-.imgrelatedinfo{
+.imgrelatedinfo {
     position: absolute;
     left: 10px;
     right: 10px;
@@ -144,48 +194,56 @@ body{
 
 
 /* images */
-#poverty{
+#poverty {
     background-image: url('./images/poverty.jpg');
     background-size: 100% 100%;
 }
-#health{
+
+#health {
     background-image: url('./images/health.jpg.avif');
     background-size: 100% 100%;
 }
-#sanity{
+
+#sanity {
     background-image: url('./images/sanity.jpeg');
     background-size: 100% 100%;
 }
-#industry{
+
+#industry {
     background-image: url('./images/industry.jpg');
     background-size: 100% 100%;
 }
-#edu{
+
+#edu {
     background-image: url('./images/edu.jpg.webp.jpeg');
     background-size: 100% 100%;
 }
-#waterbody{
+
+#waterbody {
     background-image: url('./images/water.jpg');
     background-size: 100% 100%;
 }
-  
-#climate{ 
+
+#climate {
     background-image: url('./images/climate.jpg');
     background-size: 100% 100%;
 }
-#eco{
+
+#eco {
     background-image: url('./images/eco.jpg.avif');
     background-size: 100% 100%;
 }
-#hunger{
+
+#hunger {
     background-image: url('./images/hunger.jpg');
     background-size: 100% 100%
 }
-.latestnews{
+
+.latestnews {
     /* padding-top: 20px; */
     padding-bottom: 20px;
     font-size: 4.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* background-color: white; */
     text-align: center;
     font-weight: 600;
@@ -194,8 +252,9 @@ body{
     text-shadow: 3px 3px rgb(63, 60, 60);
     /* color: white; */
 }
-.latest{
-    
+
+.latest {
+
     padding-top: 100px;
     padding-bottom: 50px;
     margin-top: 100px;
@@ -203,7 +262,8 @@ body{
     height: auto;
     width: 100%;
 }
-.allnews{
+
+.allnews {
     height: auto;
     width: 100%;
     display: flex;
@@ -211,10 +271,11 @@ body{
     justify-content: center;
     gap: 200px;
 }
-.news{
+
+.news {
     box-shadow:
-    rgba(16, 16, 15, 0.42) 0px 60px 123px -25px,
-    rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
+        rgba(16, 16, 15, 0.42) 0px 60px 123px -25px,
+        rgba(26, 200, 14, 0.08) 0px 35px 75px -35px;
     width: 25%;
     height: 900px;
     /* background-color: rgb(198, 240, 198); */
@@ -224,24 +285,29 @@ body{
     display: inline-block;
     overflow: hidden;
 }
-.newsimage{
+
+.newsimage {
     height: 60%;
     transition: transform 0.3s ease-in-out;
 }
-.newsimage:hover{
-    transform: scale(1.1); 
+
+.newsimage:hover {
+    transform: scale(1.1);
 }
-.newsinfo{
+
+.newsinfo {
     padding-left: 20px;
     padding-top: 30px;
     height: 30%;
     font-size: 2rem;
     background-color: white;
 }
-.imagecont{
+
+.imagecont {
     width: 100%;
 }
-.readmorebtn{
+
+.readmorebtn {
     font-size: 1.8rem;
     border-radius: 15px;
     margin-top: 20px;
@@ -251,59 +317,70 @@ body{
     padding-top: 15px;
     background-color: rgb(3, 80, 3);
 }
-.readmorebtn a{
+
+.readmorebtn a {
     text-decoration: none;
     color: white;
 }
-.readmorebtn:hover{
+
+.readmorebtn:hover {
     background-color: rgb(142, 243, 142);
 }
-.readmorebtn:hover a{
+
+.readmorebtn:hover a {
     color: black;
 }
 
 /* images */
-#plastic{
+#plastic {
     display: block;
     background-image: url(./images/plastic.jpg.gif);
     background-size: 100% 100%;
 }
-#climateimage{
+
+#climateimage {
     display: block;
     background-image: url(./images/climatenews.jpg.webp);
     background-size: 100% 100%;
 }
-#solarcooking{
+
+#solarcooking {
     display: block;
     background-image: url(./images/solar-cooking.jpg.webp);
     background-size: 100% 100%;
 }
-#logicladder{
+
+#logicladder {
     display: block;
     background-image: url(./images/logicladder.jpg.webp);
     background-size: 100% 100%;
 }
-#aiandgrow{
+
+#aiandgrow {
     display: block;
     background-image: url(./images/aiandgrow.jpg.webp);
     background-size: 100% 100%;
 }
-#greenjobs{
+
+#greenjobs {
     display: block;
     background-image: url(./images/green-jobs.jpg.webp);
     background-size: 100% 100%;
 }
-#profitandsustain{
+
+#profitandsustain {
     display: block;
     background-image: url('./images/profitandsustain.jpg.webp');
     background-size: 100% 100%;
 }
-#windmill{
+
+#windmill {
     display: block;
     background-image: url('./images/windmill.jpeg');
     background-size: 100% 100%;
 }
-#effi{
+
+#effi {
     display: block;
     background-image: url('./images/aiandsus.jpeg');
     background-size: 100% 100%;
