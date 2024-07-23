@@ -41,7 +41,6 @@
 }
 */
 
-
 /* a {
   color: inherit;
   display: flex;
@@ -142,7 +141,6 @@ input:checked+.slider:before {
  @media (max-width: 1080px) { 
   /* @media (max-width:2140px) { */
 
-
 /*   .navitem {
     display: none;
   }
@@ -191,15 +189,15 @@ input:checked+.slider:before {
 
 .menu a {
   position: relative;
-  font-size: clamp(1.0rem, 2.5vw, 1.7rem);
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
   /* Minimum 1.2rem, scales with 1.5vw, and maximum 1.7rem */
   text-decoration: none;
   filter: brightness(1);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .menu a::after {
-  content: '';
+  content: "";
   width: 0;
   height: 0.3vw;
   /* Adjusted to be responsive */
@@ -225,6 +223,14 @@ input:checked+.slider:before {
 }
 
 .navitem a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: inherit;
+}
+
+.navitemm a {
   color: white;
   display: flex;
   justify-content: center;
@@ -266,7 +272,7 @@ li {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -283,23 +289,23 @@ li {
   bottom: 0.1vw;
   /* Adjusted to be responsive */
   background-color: white;
-  transition: .4s;
-  background-image: url('./images/dark.png');
+  transition: 0.4s;
+  background-image: url("./images/dark.png");
   background-size: cover;
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked + .slider {
+  background-color: #2196f3;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
-  transform: translateX(1.0vw);
+input:checked + .slider:before {
+  transform: translateX(1vw);
   /* Adjusted to be responsive */
-  background-image: url('./images/light.png');
+  background-image: url("./images/light.png");
 }
 
 .slider.round {
@@ -371,6 +377,6 @@ input:checked+.slider:before {
 
 @media (min-width: 2250px) {
   .menu a {
-    font-size: clamp(1.0rem, 2.5vw, 1.7rem);
+    font-size: clamp(1rem, 2.5vw, 1.7rem);
   }
 }
