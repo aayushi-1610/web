@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1db86505.css",
+    "main.js": "/static/js/main.da7e029e.js",
+    "static/js/453.64512fd7.chunk.js": "/static/js/453.64512fd7.chunk.js",
+    "static/media/water.jpg": "/static/media/water.0ef7d8a7cf0b54ecaf3e.jpg",
+    "static/media/industry.jpg": "/static/media/industry.f84d802eea6e01130a10.jpg",
+    "static/media/nature2.jpg": "/static/media/nature2.2a5eed191f72fc84a388.jpg",
+    "static/media/climate.jpg": "/static/media/climate.0e91267a2392d275d0ac.jpg",
+    "static/media/poverty.jpg": "/static/media/poverty.5b03ef1c741dcdb1b8e1.jpg",
+    "static/media/light.png": "/static/media/light.dfd0ad20361940eae528.png",
+    "static/media/edu.jpg.webp.jpeg": "/static/media/edu.jpg.webp.f94458f5d18f1c551ffc.jpeg",
+    "static/media/solar-cooking.jpg.webp": "/static/media/solar-cooking.jpg.c775357c83df38c3e46b.webp",
+    "static/media/plastic.jpg.gif": "/static/media/plastic.jpg.bf8e9177c3885c9b6faa.gif",
+    "static/media/hunger.jpg": "/static/media/hunger.31d93c298faa9fbf9efb.jpg",
+    "static/media/logicladder.jpg.webp": "/static/media/logicladder.jpg.6cc1e6a863b9f8e8c786.webp",
+    "static/media/eco.jpg.avif": "/static/media/eco.jpg.e4a3c3f52adacf72704e.avif",
+    "static/media/sanity.jpeg": "/static/media/sanity.1cd814ec667c75a16af4.jpeg",
+    "static/media/aiandsus.jpeg": "/static/media/aiandsus.1c93ba8fb7f844d57cae.jpeg",
+    "static/media/green-jobs.jpg.webp": "/static/media/green-jobs.jpg.bfc9c714841ea75e1484.webp",
+    "static/media/health.jpg.avif": "/static/media/health.jpg.2e7b54ae5c6c67c01b0c.avif",
+    "static/media/aiandgrow.jpg.webp": "/static/media/aiandgrow.jpg.97b0425b122fe53c3536.webp",
+    "static/media/climatenews.jpg.webp": "/static/media/climatenews.jpg.63083a51efcfa4d490ef.webp",
+    "static/media/profitandsustain.jpg.webp": "/static/media/profitandsustain.jpg.36d42b7ecd739a18e007.webp",
+    "index.html": "/index.html",
+    "main.1db86505.css.map": "/static/css/main.1db86505.css.map",
+    "main.da7e029e.js.map": "/static/js/main.da7e029e.js.map",
+    "453.64512fd7.chunk.js.map": "/static/js/453.64512fd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1db86505.css",
+    "static/js/main.da7e029e.js"
+  ]
+}

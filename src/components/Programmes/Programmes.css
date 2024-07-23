@@ -1,0 +1,231 @@
+.programcontainer {
+    /* width: 70%; */
+    width: 100%;
+    font-weight: 500;
+    margin: auto;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    font-size: 2.5vw;
+    background: url('./images/Untitled\ design.png');
+    background-size: contain;
+    /* opacity: 0.4; */
+    /* background-color: pink; */
+    padding-top: 1vh;
+    /* padding-left: 4vh; */
+    /* padding-right: 4vh; */
+}
+
+.start-heading {
+    margin-top: 2%;
+    text-align: center;
+    font-family: Caveat;
+    /* font-weight: 500; */
+    font-size: 5.5vw;
+}
+
+.programmes-overview {
+    padding-left: 7%;
+    padding-right: 5%;
+    padding-top: 2vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vw;
+}
+
+.program {
+    margin-top: 8%;
+    padding-left: 7%;
+    padding-right: 5%;
+}
+
+.programname {
+    margin-bottom: 3%;
+    font-weight: 700;
+    font-family: Sacramento;
+    /* font-family: "Cedarville Cursive"; */
+    font-size: 6vw;
+    font-style: italic;
+}
+
+
+.programm-png-image {
+
+    margin: auto;
+    margin-top: 100px;
+    background-image: url('./images/program_png.jpg');
+    height: 700px;
+    width: 60%;
+    background-size: 100% 100%;
+}
+
+.program-related-image {
+    background-color: #f0f0f0;
+    /* Placeholder color */
+    background-size: 100% 100%;
+    /* height: 50vh; */
+    height: 600px;
+    /* height: 100%; */
+    width: 70%;
+    transition: all 0.5s ease-in;
+}
+
+#earthjustice {
+    background-image: url('./images/earthjustice.jpg');
+    background-size: 100% 100%;
+}
+
+#a_growing_culture {
+    background-image: url('./images/a_growing_culture.jpg');
+    background-size: 100% 100%;
+}
+
+#WeForest {
+    background-image: url('./images/weforest.jpg');
+    background-size: 100% 100%;
+
+}
+
+#National_Audubon_Society {
+    background-image: url('./images/National_Audubon_Society.jpg');
+    background-size: 100% 100%;
+
+}
+
+#Cool_Effect {
+    background-image: url('./images/Cool_Effect.jpg');
+    background-size: 100% 100%;
+
+}
+
+#Wildlife_Conservation_Society {
+    background-image: url('./images/Wildlife_Conservation_Society.jpg');
+    background-size: 100% 100%;
+}
+
+.programinfo {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    gap: 4%;
+}
+
+/* .program-related-image:hover{
+    border: 10px solid rgb(3, 70, 15);
+    overflow: hidden;
+
+    transition-duration:0.3s ;
+
+} */
+
+.program-related-para {
+    width: 100%;
+}
+
+.donate {
+    margin-top: 100px;
+    /* margin-left: 100px; */
+}
+
+.donatebtn a {
+    font-size: 4vh;
+    text-decoration: none;
+    line-height: 80px;
+    color: black;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.donatebtn {
+    /* cursor: pointer;
+    width: 150px;
+    height: 90px;
+    font-size: 2vw;
+    /* background: none; */
+    /* background-color:green;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: all; */
+
+
+    /* margin: 100px; */
+    padding: 15px 40px;
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    width: 13%;
+    text-decoration: none;
+    /* color: #FFF; */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+/* .donatebtn:hover{
+    background-color: rgb(125, 233, 125);
+}
+.donatebtn:hover a{
+    color: black;
+} */
+
+
+.donatebtn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #333; */
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.donatebtn::before {
+    content: "";
+    background: linear-gradient(45deg,
+            #FF0000, #FF7300, #FFFB00, #48FF00,
+            #00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* hover */
+.donatebtn:hover::before {
+    opacity: 1;
+}
+
+.donatebtn:active:after {
+    background: transparent;
+}
+
+.donatebtn:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* added */
