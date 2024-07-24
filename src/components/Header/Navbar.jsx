@@ -35,9 +35,9 @@ export default function Navbar(props) {
           <Link to="/">About Us</Link>
         </li>
         <div className="hamburger-menu">
-          <a onClick={handleClick}>
+          <span onClick={handleClick}>
             <GiHamburgerMenu />
-          </a>
+          </span>
         </div>
         <li>
           <label className="switch">
@@ -47,17 +47,27 @@ export default function Navbar(props) {
         </li>
         <div className="login">
           {!props.login && (
-            <li className="navitem">
-              <Link to="/">Log In</Link>
+            <li className="navitemm">
+              <Link to="/login">Log In</Link>
             </li>
           )}
           {!props.login && (
-            <li className="navitem">
-              <Link to="/">Sign In</Link>
+            <li className="navitemm">
+              <Link to="/sign-up">Sign In</Link>
             </li>
           )}
-          {props.login && <span>Username</span>}
-          {props.login && <span>UserImage</span>}
+          {props.login && (
+            <li className="navitemm">
+              <Link to="/">{props.username}</Link>
+            </li>
+          )}
+          {props.login && (
+            <li className="navitemm">
+              <Link to="/" onClick={props.signout}>
+                Sign Out
+              </Link>
+            </li>
+          )}
         </div>
         <div className={showNavItems ? "mobile-version-menu" : "inactive"}>
           <li className="navitemm">

@@ -177,6 +177,7 @@ input:checked+.slider:before {
 }  */
 
 .menu {
+  margin: 0px;
   background-color: rgb(1, 34, 1);
   z-index: 100;
   position: relative;
@@ -226,7 +227,7 @@ input:checked+.slider:before {
   color: white;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   height: inherit;
 }
 
@@ -234,15 +235,11 @@ input:checked+.slider:before {
   color: white;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   height: inherit;
 }
 
-ul {
-  margin: 0;
-}
-
-li {
+.menu li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -342,6 +339,7 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     padding-left: 5%;
+    color: white;
   }
 
   .menu {
