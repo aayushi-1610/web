@@ -53,7 +53,7 @@ export default function Navbar(props) {
           )}
           {!props.login && (
             <li className="navitemm">
-              <Link to="/sign-up">Sign In</Link>
+              <Link to="/sign-up">Sign Up</Link>
             </li>
           )}
           {props.login && (

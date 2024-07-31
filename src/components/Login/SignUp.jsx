@@ -6,7 +6,7 @@ import Banner from "./components/Banner";
 export default function SignUp(props) {
   return (
     <div className="login-container">
-      <Signup setUser={props.setuser} />
+      <Signup setuser={props.setuser} />
       <Banner />
     </div>
   );

@@ -20,7 +20,7 @@ function QuizApp(props) {
 
   const setQuizResult = async (obj) => {
     setIsQuizRunning(false);
-    obj["ID"] = "Test01";
+    obj["ID"] = props.username;
     obj["quizID"] = quizID;
     setLoading(true);
     setError(null);

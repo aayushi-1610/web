@@ -1,80 +1,186 @@
-.footer
-{
-    width: 100%;
-    height: 600px;
-    background-image: url('./images/whatsapp.jpeg') ;
-    background-size: 100% 100%;
-    padding-top: 60px;
-    color: white;
-    font-size: 2rem;
-    font-family: 'Poppins';
-}
-.follow{
-    position: relative;
-    padding-left: 50px;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-}
-.allcontent{
-    display: flex;
-    justify-content: space-around;
-}
-.icons{
-    margin-left: 50px;
-    width: 50px;
-    height: 50px;
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #102f15;
+  background-size: 100% 100%;
+  color: white;
+  font-family: "Poppins";
 }
 
-.allist ul{
-        list-style-type: none;
-}
-.allist a{
-    font-family: 'Poppins';
-    text-decoration: none;
-    font-size: 2.3rem;
-    color: white;
-    /* color: black; */
-    font-weight: bolder;
-}
-.allist a:hover{
-    color: red;
-}
-#phone{
-margin-top: 10px;
-}
-.follow span{
-    margin-left: 50px;
-    font-size: 2rem;
-}
-.slogan{
-    margin-top: 100px;
-    font-size: 4.5rem;
-    font-family:cursive;
-    display: inline;
+.follow {
+  position: relative;
+  color: white;
+  text-align: center;
 }
 
-#solution{
-    color: rgb(142, 241, 142);
-    /* color: azure; */
-    font-weight: 700;
+.allcontent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-#pollution{
-        color: red;
-        font-weight: 600;
+
+.allist ul {
+  list-style-type: none;
+  padding: 10px;
 }
-.icons:hover{
-    color: red;
-    width: 55px;
-    height: 55px;
+
+.allist li {
+  margin: 10px 0;
+  padding: 0;
 }
-.last{
-    background-color: rgb(60, 58, 58);
-    height: 60px;
-    width: 100%;
-    color: white;
-    padding-top: 30px;
-    font-size: 2rem;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+.allist a {
+  font-family: "Poppins";
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: white;
+  font-weight: normal;
+}
+
+.allist a:hover {
+  color: red;
+}
+
+.follow span {
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+.slogan {
+  margin-top: 60px;
+  font-size: 4.5rem;
+  font-family: cursive;
+  display: inline;
+}
+
+#solution {
+  color: rgb(142, 241, 142);
+  /* color: azure; */
+  font-family: cursive;
+  font-weight: 700;
+}
+
+#pollution {
+  color: red;
+  font-family: cursive;
+  font-weight: 600;
+}
+
+.icons {
+  margin: 0px 10px;
+  height: 1%;
+  width: 2%;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.follow a {
+  color: white;
+  text-decoration: none;
+}
+
+.icons:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.last {
+  background-color: rgb(1, 34, 1);
+  height: auto;
+  width: 100%;
+  color: white;
+  padding: 20px 0px;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.last-icons {
+  height: 1%;
+}
+
+/* responsive */
+@media (max-width: 2200px) {
+  .footer {
+      font-size: 1.3rem;
+  }
+
+  .last {
+      font-size: 1.3rem;
+  }
+
+  .allist a {
+      font-size: 1.3rem;
+  }
+
+  .follow {
+      font-size: 20px;
+  }
+
+  .slogan {
+      font-size: 3rem;
+  }
+
+  .follow span {
+      font-size: 1.3rem;
+  }
+
+  .icons {
+      width: 2%;
+  }
+}
+
+@media (max-width: 1900px) {
+  .last {
+      font-size: 1.1rem;
+  }
+
+  .footer {
+      font-size: 1rem;
+  }
+
+  .allist a {
+      font-size: 1rem;
+  }
+
+  .slogan {
+      font-size: 2.5rem;
+  }
+
+  .follow span {
+      font-size: 1rem;
+  }
+
+  .icons {
+      width: 2%;
+  }
+}
+
+@media (max-width: 900px) {
+
+
+  .last {
+      font-size: 1.1rem;
+  }
+
+  .footer {
+      font-size: 1rem;
+  }
+
+  .allist a {
+      font-size: 1rem;
+  }
+
+  .slogan {
+      font-size: 2.5rem;
+      width: 100vw;
+      text-align: center;
+  }
+
+  .follow span {
+      font-size: 1rem;
+  }
+
+  .icons {
+      width: 3%;
+  }
 }

@@ -68,8 +68,9 @@ export default function Signup(props) {
           Already have an account? <Link to="/Login">Sign in</Link>
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
           <input
+            className="login-input"
             type="text"
             required
             placeholder="Your name"
@@ -78,6 +79,7 @@ export default function Signup(props) {
             value={formData.firstName}
           />
           <input
+            className="login-input"
             type="email"
             required
             placeholder="Email address"
@@ -87,6 +89,7 @@ export default function Signup(props) {
           />
           <div className="passwordBox">
             <input
+              className="login-input"
               type="password"
               ref={passwordInputRef}
               required
@@ -102,8 +105,8 @@ export default function Signup(props) {
             ></div>
           </div>
 
-          <small>{text}</small>
-          <button>Next</button>
+          <small className="login-error-text">{text}</small>
+          <button className="login-button">Next</button>
           <small>
             By clicking the 'Next' button, you agree to creating a free account
             and to <Link to="/terms">Terms of Service</Link> and to{" "}

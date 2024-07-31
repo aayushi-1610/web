@@ -331,7 +331,7 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1080px) {
-  .navitem {
+  .menu .navitem {
     display: none;
   }
 

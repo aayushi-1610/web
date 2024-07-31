@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="follow">
-          <p>Join Us On :</p>
+          <p>Join Us On</p>
           <FaInstagram className='icons' />
           <FaFacebook className='icons' />
           <FaTwitter className='icons' />

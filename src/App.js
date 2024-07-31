@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Header/Navbar";
@@ -18,16 +18,25 @@ function App() {
   function setUser(username) {
     setUsername(username);
     setLogin(true);
+    window.localStorage.setItem("username", username);
   }
 
   function signOut() {
     setUsername("");
     setLogin(false);
+    window.localStorage.removeItem("username");
   }
 
   const toggleMode = () => {
     mode === "dark" ? setMode("light") : setMode("dark");
   };
+
+  useEffect(() => {
+    window.localStorage.username
+      ? setUsername(window.localStorage.username)
+      : setUsername("");
+    window.localStorage.username ? setLogin(true) : setLogin(false);
+  }, []);
 
   return (
     <Router>
