@@ -1,5 +1,4 @@
 import "./App.css";
-
 import Signup from "./components/Signup";
 import Banner from "./components/Banner";
 

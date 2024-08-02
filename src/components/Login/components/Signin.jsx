@@ -1,12 +1,14 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Signin(props) {
   const url = "https://dr9tnq-3000.csb.app";
   const passwordIconRef = useRef(null);
   const passwordInputRef = useRef(null);
   const [text, setText] = useState("");
+  const history = useHistory();
 
   function toggle() {
     const iconClassList = passwordIconRef.current.classList;
@@ -47,6 +49,7 @@ export default function Signin(props) {
         setText(result.data.errorMessage);
       } else {
         setText("logged in yayyy!");
+        history.push("/");
         props.setuser(data.name);
       }
     };

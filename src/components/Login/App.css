@@ -67,11 +67,12 @@ html {
   box-shadow: 0px 0px 2px black;
 }
 .login-button {
-  background: #ddd;
+  color: white;
+  background: #4e6243;
   cursor: pointer;
 }
 .login-button:hover {
-  background: #ccc;
+  background: #102f15;
 }
 small {
   color: grey;

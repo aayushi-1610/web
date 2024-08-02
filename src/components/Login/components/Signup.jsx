@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 
 export default function Signup(props) {
@@ -7,6 +8,7 @@ export default function Signup(props) {
   const passwordIconRef = useRef(null);
   const passwordInputRef = useRef(null);
   const [text, setText] = useState("Minimum 8 characters");
+  const history = useHistory();
 
   function toggle() {
     const iconClassList = passwordIconRef.current.classList;
@@ -52,6 +54,7 @@ export default function Signup(props) {
           setText(result.data.errorMessage);
         } else {
           setText("signed up yayyyyyy!");
+          history.push("/");
           props.setuser(data.name);
         }
       };

@@ -83,45 +83,47 @@ function QuizApp(props) {
     return () => {
       source.cancel("Operation canceled by the user.");
     };
-  }, [isQuizRunning]);
+  }, [loading, isQuizRunning]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="error-screen">Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="error-screen">Error: {error.message}</div>;
   }
 
   return (
-    <div className="quiz-outer-container">
-      <div className="quiz-name-container">
-        {!isQuizRunning ? (
-          <>
-            <h1 className="quiz-heading">Quizzes</h1>
-            {quizSet.map((quiz, index) => {
-              return (
-                <QuizTile
-                  key={index}
-                  id={index}
-                  onClick={() => handleClick(index)}
-                  title={quiz.quizTitle}
-                  points={quiz.totalPoints}
-                  data={userData}
-                />
-              );
-            })}
-          </>
-        ) : (
-          <div className="react-quiz-outer-container">
-            <Quiz
-              quiz={quiz}
-              onComplete={setQuizResult}
-              timer={120}
-              customResultPage={customResultPage}
-            />
-          </div>
-        )}
+    <div>
+      <h1 style={{ textAlign: "center" }}>Quizzes</h1>
+      <div className="quiz-outer-container">
+        <div className="quiztile-container">
+          {!isQuizRunning ? (
+            <>
+              {quizSet.map((quiz, index) => {
+                return (
+                  <QuizTile
+                    key={index}
+                    id={index}
+                    onClick={() => handleClick(index)}
+                    title={quiz.quizTitle}
+                    points={quiz.totalPoints}
+                    data={userData}
+                  />
+                );
+              })}
+            </>
+          ) : (
+            <div className="react-quiz-outer-container">
+              <Quiz
+                quiz={quiz}
+                onComplete={setQuizResult}
+                timer={120}
+                customResultPage={customResultPage}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

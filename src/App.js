@@ -8,23 +8,34 @@ import Programmes from "./components/Programmes/Programmes";
 import BlogPage from "./components/Blogs/components/BlogPage";
 import Login from "./components/Login/Login";
 import Signup from "./components/Login/SignUp";
+import Profile from "./components/Profile/profile";
+import LoginMessage from "./components/Alert/Alert";
+import About from "./components/About/About";
 import "./App.css";
 
 function App() {
   const [Username, setUsername] = useState("");
   const [login, setLogin] = useState(false);
   const [mode, setMode] = useState("light");
+  const [message, setMessage] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   function setUser(username) {
     setUsername(username);
     setLogin(true);
     window.localStorage.setItem("username", username);
+    setLoggedIn(true);
+    setMessage("You have logged in!");
+    setTimeout(() => setLoggedIn(false), 3000);
   }
 
   function signOut() {
     setUsername("");
     setLogin(false);
     window.localStorage.removeItem("username");
+    setLoggedIn(true);
+    setMessage("You have signed out!");
+    setTimeout(() => setLoggedIn(false), 3000);
   }
 
   const toggleMode = () => {
@@ -48,6 +59,7 @@ function App() {
             : { backgroundColor: "white", color: "black" }
         }
       >
+        <LoginMessage show={loggedIn} message={message} />
         <Navbar
           changeMode={toggleMode}
           username={Username}
@@ -72,6 +84,12 @@ function App() {
           </Route>
           <Route path="/sign-up">
             <Signup setuser={setUser} />
+          </Route>
+          <Route exact path="/Profile">
+            <Profile username={Username} />
+          </Route>
+          <Route path="/About">
+            <About />
           </Route>
         </Switch>
         <Footer />

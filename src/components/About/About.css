@@ -1,0 +1,174 @@
+.App {
+  width: 100%;
+}
+
+.aboutusdiv {
+  background-color: #a4c287;
+  padding: 20px 0px;
+}
+.ourstorydiv {
+  background-color: #eaf1b1;
+  padding: 20px 0px;
+}
+.missiondiv {
+  background-color: #a4c287;
+  padding: 20px 0px;
+}
+.ourapproachdiv {
+  background-color: #eaf1b1;
+  padding: 20px 0px;
+}
+.meettheteamdiv {
+  background-color: #a4c287;
+  padding: 20px 0px;
+}
+.joinusdiv {
+  background-color: #eaf1b1;
+  padding: 20px 0px;
+}
+.getinvolveddiv {
+  background-color: #a4c287;
+  padding: 20px 0px;
+}
+.lefttextdiv {
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-right: 35%;
+  padding: 5px 0px;
+}
+.righttextdiv {
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 2%;
+  margin-left: 35%;
+  padding: 5px 0px;
+}
+.lefthead {
+  text-align: left;
+  margin-left: 3%;
+}
+.righthead {
+  margin-left: 3%;
+}
+.leftpara {
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.rightpara {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.backdiv {
+  background-color: #a4c287;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.division {
+  background-color: white;
+  height: 250px;
+  width: 230px;
+  border-radius: 12%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4.25%;
+  margin-bottom: 7%;
+  text-align: center;
+  float: left;
+  padding-top: 1.25%;
+  padding-bottom: 2.25%;
+  color: black;
+}
+.division:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.25);
+}
+.photo {
+  border-radius: 13%;
+}
+.linkedin {
+  text-decoration: none;
+  color: black;
+}
+.instagram {
+  text-decoration: none;
+  color: black;
+}
+.alink {
+  color: black;
+  text-decoration: none;
+  font-size: small;
+  padding-left: 3%;
+}
+.alink:hover {
+  transition-duration: 0.5s;
+  font-size: medium;
+}
+.photo:hover {
+  transform: scale(1.25);
+  transition-duration: 0.5s;
+}
+
+@media (min-width: 1800px) {
+  .division {
+    height: 350px;
+    width: 25%;
+  }
+}
+
+@media (max-width: 1500px) and (min-width: 1000px) {
+  .photo:hover {
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+  }
+  .lefttextdiv {
+    font-size: 15px;
+  }
+  .righttextdiv {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 750px) {
+  .photo:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
+}
+@media (max-width: 750px) and (min-width: 460px) {
+  .lefttextdiv {
+    font-size: 13px;
+  }
+  .righttextdiv {
+    font-size: 13px;
+  }
+}
+@media (max-width: 550px) {
+  .alink {
+    font-size: 10px;
+  }
+  .alink:hover {
+    font-size: 13px;
+  }
+  .division {
+    font-size: 15px;
+  }
+  .photo:hover {
+    transform: scale(1);
+    transition-duration: 0.5s;
+  }
+}
+@media (max-width: 460px) and (min-width: 200px) {
+  .lefttextdiv {
+    font-size: 8px;
+  }
+  .righttextdiv {
+    font-size: 8px;
+  }
+  .division {
+    height: 230px;
+    width: 250px;
+  }
+}

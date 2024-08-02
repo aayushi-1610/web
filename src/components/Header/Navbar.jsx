@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import "./Navbar.css";
 
 export default function Navbar(props) {
   const [showNavItems, setShowNavItems] = useState(false);
+  const history = useHistory();
 
   function handleClick() {
     setShowNavItems((prev) => !prev);
+  }
+
+  function signOut() {
+    props.signout();
+    history.push("/");
   }
 
   return (
@@ -32,7 +39,7 @@ export default function Navbar(props) {
           <Link to="/">Contact Us</Link>
         </li>
         <li className="navitem">
-          <Link to="/">About Us</Link>
+          <Link to="/About">About Us</Link>
         </li>
         <div className="hamburger-menu">
           <span onClick={handleClick}>
@@ -58,12 +65,12 @@ export default function Navbar(props) {
           )}
           {props.login && (
             <li className="navitemm">
-              <Link to="/">{props.username}</Link>
+              <Link to="/Profile">{props.username}</Link>
             </li>
           )}
           {props.login && (
             <li className="navitemm">
-              <Link to="/" onClick={props.signout}>
+              <Link to="/" onClick={signOut}>
                 Sign Out
               </Link>
             </li>
@@ -89,7 +96,7 @@ export default function Navbar(props) {
             <Link to="/">Contact Us</Link>
           </li>
           <li className="navitemm">
-            <Link to="/">About Us</Link>
+            <Link to="/About">About Us</Link>
           </li>
         </div>
       </ul>
