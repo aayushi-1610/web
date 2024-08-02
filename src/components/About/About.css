@@ -20,7 +20,7 @@
 }
 .meettheteamdiv {
   background-color: #a4c287;
-  padding: 20px 0px;
+  padding: 20px 0px 70px 0px;
 }
 .joinusdiv {
   background-color: #eaf1b1;
@@ -83,8 +83,8 @@
   color: black;
 }
 .division:hover {
-  transition-duration: 0.5s;
-  transform: scale(1.25);
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.1);
 }
 .photo {
   border-radius: 13%;
@@ -108,7 +108,7 @@
   font-size: medium;
 }
 .photo:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   transition-duration: 0.5s;
 }
 

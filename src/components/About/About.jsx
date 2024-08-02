@@ -1,9 +1,9 @@
 import React from "react";
 import "./About.css";
-// import manas from "./Images/manas.jpg";
-// import bhavyanshi from "./Images/bhavyanshi.jpg";
-// import manisha from "./Images/manisha.jpg";
-// import aayushi from "./Images/aayushi.jpg";
+import manas from "./images/manas.jpg";
+import bhavyanshi from "./images/bhavyanshi.jpg";
+import manisha from "./images/manisha.jpg";
+import aayushi from "./images/aayushi.jpg";
 // import instaLogo from "./Images/instagram logo.jpg";
 // import linkedinLogo from "./Images/linkedin logo.jpg";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -102,25 +102,25 @@ function TeamSection() {
   const teamMembers = [
     {
       name: "Manas Verma",
-      //   img: manas,
+      img: manas,
       insta: "https://www.instagram.com/mv_is_here21",
       linkedin: "https://www.linkedin.com/in/manas-verma-86a632283/",
     },
     {
       name: "Bhavyanshi Karela",
-      //   img: bhavyanshi,
+      img: bhavyanshi,
       insta: "https://www.instagram.com/bhavyan.she/",
       linkedin: "https://www.linkedin.com/in/bhavyanshi-karela-252a86274/",
     },
     {
       name: "Manisha Choudhary",
-      //   img: manisha,
+      img: manisha,
       insta: "https://www.instagram.com/manisha15_07",
       linkedin: "https://www.linkedin.com/in/manisha-choudhary-71ba5828b/",
     },
     {
       name: "Aayushi Prajapati",
-      //   img: aayushi,
+      img: aayushi,
       insta: "https://www.instagram.com/aayushiprajapati615",
       linkedin: "https://www.linkedin.com/in/aayushi-prajapati-00189b28b/",
     },
@@ -132,7 +132,7 @@ function TeamSection() {
         <div className="division" key={member.name}>
           <center>
             <img
-              //   src={member.img}
+              src={member.img}
               height="52%"
               width="40%"
               className="photo"

@@ -11,6 +11,7 @@ import Signup from "./components/Login/SignUp";
 import Profile from "./components/Profile/profile";
 import LoginMessage from "./components/Alert/Alert";
 import About from "./components/About/About";
+import ContactUs from "./components/Contact/Contact";
 import "./App.css";
 
 function App() {
@@ -20,22 +21,24 @@ function App() {
   const [message, setMessage] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
 
+  function showpopup(message) {
+    setLoggedIn(true);
+    setMessage(message);
+    setTimeout(() => setLoggedIn(false), 3000);
+  }
+
   function setUser(username) {
     setUsername(username);
     setLogin(true);
     window.localStorage.setItem("username", username);
-    setLoggedIn(true);
-    setMessage("You have logged in!");
-    setTimeout(() => setLoggedIn(false), 3000);
+    showpopup("You have logged in!");
   }
 
   function signOut() {
     setUsername("");
     setLogin(false);
     window.localStorage.removeItem("username");
-    setLoggedIn(true);
-    setMessage("You have signed out!");
-    setTimeout(() => setLoggedIn(false), 3000);
+    showpopup("You have logged out!");
   }
 
   const toggleMode = () => {
@@ -71,7 +74,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/Quiz">
-            <QuizApp username={Username} />
+            <QuizApp username={Username} setAlert={showpopup} />
           </Route>
           <Route path="/Programmes">
             <Programmes />
@@ -90,6 +93,9 @@ function App() {
           </Route>
           <Route path="/About">
             <About />
+          </Route>
+          <Route path="/Contact">
+            <ContactUs />
           </Route>
         </Switch>
         <Footer />

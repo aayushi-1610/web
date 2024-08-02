@@ -36,7 +36,7 @@ export default function Navbar(props) {
           <Link to="/">Eco-Friendly</Link>
         </li>
         <li className="navitem">
-          <Link to="/">Contact Us</Link>
+          <Link to="/Contact">Contact Us</Link>
         </li>
         <li className="navitem">
           <Link to="/About">About Us</Link>
@@ -93,7 +93,7 @@ export default function Navbar(props) {
             <Link to="/">Eco-Friendly</Link>
           </li>
           <li className="navitemm">
-            <Link to="/">Contact Us</Link>
+            <Link to="/Contact">Contact Us</Link>
           </li>
           <li className="navitemm">
             <Link to="/About">About Us</Link>

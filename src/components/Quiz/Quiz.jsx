@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Quiz from "react-quiz-component";
 import QuizTile from "./components/QuizTile";
+import Leaderboard from "./components/Leaderboard";
 import "./Quizmenu.css";
 
 function QuizApp(props) {
@@ -12,6 +13,7 @@ function QuizApp(props) {
   const [isQuizRunning, setIsQuizRunning] = useState(false);
   const [quizID, setQuizID] = useState(0);
   const [userData, setUserData] = useState([]);
+  const [leaderboardData, setLeaderboardData] = useState([]);
   const url = "https://dr9tnq-3000.csb.app";
 
   function customResultPage(obj) {
@@ -28,6 +30,7 @@ function QuizApp(props) {
     try {
       const response = await axios.post(`${url}/quiz/submit`, obj);
       setLoading(false);
+      props.setAlert(response.data.message);
     } catch (err) {
       setError(err);
       setLoading(false);
@@ -68,6 +71,7 @@ function QuizApp(props) {
 
         setQuizSet(response.data.quizInfo);
         setUserData(response.data.userData);
+        setLeaderboardData(response.data.leaderboardData);
         setLoading(false);
       } catch (err) {
         if (axios.isCancel(err)) {
@@ -83,7 +87,7 @@ function QuizApp(props) {
     return () => {
       source.cancel("Operation canceled by the user.");
     };
-  }, [loading, isQuizRunning]);
+  }, [loading, isQuizRunning, leaderboardData, props.username]);
 
   if (loading) {
     return <div className="error-screen">Loading...</div>;
@@ -125,6 +129,9 @@ function QuizApp(props) {
           )}
         </div>
       </div>
+      {!isQuizRunning && (
+        <Leaderboard data={leaderboardData} username={props.username} />
+      )}
     </div>
   );
 }

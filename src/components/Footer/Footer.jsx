@@ -88,11 +88,11 @@ export default function Footer() {
         </div>
         <div className="follow">
           <p>Join Us On</p>
-          <FaInstagram className="icons" />
-          <FaFacebook className="icons" />
-          <FaTwitter className="icons" />
-          <FaLinkedin className="icons" />
-          <FaYoutube className="icons" />
+          <FaInstagram className="icons insta" />
+          <FaFacebook className="icons facebook" />
+          <FaTwitter className="icons twitter" />
+          <FaLinkedin className="icons linkedin" />
+          <FaYoutube className="icons youtube" />
           <br />
           <FaPhoneAlt className="icons" id="phone" />
           <span>91-9925431351</span>

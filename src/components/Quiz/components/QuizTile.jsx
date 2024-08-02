@@ -42,7 +42,7 @@ function QuizTile(props) {
                   <div>Unattempted</div>
                 )}
               </a>
-              <a href="" onClick={props.onClick}>
+              <a onClick={props.onClick}>
                 {props.data[props.id] != null ? "Reattempt" : "Attempt"}
               </a>
             </div>
