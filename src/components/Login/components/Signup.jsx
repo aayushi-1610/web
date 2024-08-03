@@ -59,7 +59,6 @@ export default function Signup(props) {
         }
       };
       submit(formData);
-      //navigate to next page
     }
   }
 
