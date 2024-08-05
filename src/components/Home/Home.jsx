@@ -2,21 +2,26 @@ import React, { useState } from "react";
 import "./Home.css";
 import Boxes from "./components/Boxes";
 import News from "./components/news";
+import TypewriterEffect from "./components/typewriter";
+import Reveal from "./components/AnimatedText";
 
-export default function Main() {
+export default function Home({ mode }) {
   const [showmore, setShowmore] = useState(false);
   const handleShowMore = () => {
     setShowmore(!showmore);
   };
 
   return (
-    <div>
+    <div
+      className={`homepage-main-container ${
+        mode === "dark" ? "dark-mode" : ""
+      }`}
+    >
       <div className="homepage-backgroundimage">
         <div className="title">
           <div className="left">
-            WEBCYCLE - <br />
-            Make Future <br />
-            Sustainable
+            <Reveal>Webcycle -</Reveal>
+            <TypewriterEffect text="Make Future" breaktext="Sustainable" />
           </div>
           <div className="right">
             “There must be a better way to make the things we want, <br />a way
@@ -24,10 +29,10 @@ export default function Main() {
           </div>
         </div>
       </div>
+
       <div className="home-container">
         <div className="sustainability">
           <strong>
-            {" "}
             <p className="susp">Sustainable Development</p>
           </strong>
           <div className="content">

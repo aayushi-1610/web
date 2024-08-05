@@ -99,7 +99,9 @@ function QuizApp(props) {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Quizzes</h1>
+      <div className="quiz-hero-section">
+        <h1>Quizzes</h1>
+      </div>
       <div className="quiz-outer-container">
         <div className="quiztile-container">
           {!isQuizRunning ? (

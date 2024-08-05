@@ -1,64 +1,63 @@
 body {
   font-family: "Poppins";
-  width: 100vw;
+  width: 100%;
 }
 
 .homepage-backgroundimage {
-  height: 1100px;
+  height: 900px;
   width: 100%;
-  background: url("./images/nature2.jpg") no-repeat center center fixed;
-  background-size: 100% 100%;
-  /* position: relative; */
+  background: url("./images/nature2.jpg") no-repeat center center;
+  /* position: absolute; */
 }
 
 .title {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* gap: 90px; */
 }
 
 .left {
-  margin-top: 300px;
+  margin-top: 250px;
   color: white;
-  font-weight: 500;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .right {
   width: 40%;
   color: white;
-  font-size: 3rem;
-  margin-top: 200px;
+  font-size: 2.5rem;
+  /* margin-top: 300px; */
+  /* margin-left: 100px; */
+  /* max-height: 100px; */
 }
-
 .home-container {
-  margin: auto;
+  /* margin: auto; */
   width: 100%;
   height: auto;
-  padding-top: 100px;
-
-  padding-bottom: 100px;
+  padding: 20px;
+  /* padding-top: 100px;  */
 }
 
 .sustainability {
   background-color: #ebfadc;
   margin: auto;
   width: 80%;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
   padding: 3% 0%;
 }
 
 .susp {
-  height: 100px;
-  padding-top: 20px;
+  height: 60px;
   text-align: center;
   width: 100%;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }
 
 .content {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -148,11 +147,13 @@ body {
 }
 
 .latest {
+  border-radius: 20px;
   width: 80%;
   padding-top: 5%;
   padding-bottom: 50px;
   margin: 100px auto;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;  */
   background-color: #ebfadc;
   height: auto;
 }
@@ -166,22 +167,22 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 200px;
+  gap: 120px;
 }
 
 .news {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   width: 25%;
-  height: 900px;
-  margin-top: 5%;
-  margin-left: 25px;
+  height: 650px;
+  border-radius: 10px;
+  margin-top: 1%;
   display: inline-block;
   overflow: hidden;
 }
 
 .newsimage {
-  height: 65%;
+  height: 63%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -191,9 +192,9 @@ body {
 
 .newsinfo {
   padding-left: 20px;
-  padding-top: 30px;
+  padding-top: 35px;
   height: 20%;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   background-color: white;
 }
 
@@ -202,13 +203,13 @@ body {
 }
 
 .readmorebtn {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border-radius: 15px;
   margin-top: 20px;
   text-align: center;
-  width: 215px;
-  height: 60px;
-  padding-top: 15px;
+  width: 170px;
+  height: 45px;
+  padding-top: 10px;
   background-color: #102f15;
   position: relative;
 }
@@ -222,19 +223,24 @@ body {
   background-color: #0c0c0c;
 }
 .show-more-homepage {
+  border-radius: 30px;
   position: relative;
   margin-top: 5%;
-  left: 40%;
+  left: 43%;
   width: 15%;
-  font-size: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  font-size: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   background-color: white;
-  height: 90px;
+  height: 80px;
+}
+.show-more-homepage:hover {
+  background-color: black;
+  color: white;
 }
 
 #showless-homepage {
   position: relative;
-  margin-right: 80%;
+  margin-right: 90%;
   margin-bottom: 0%;
   margin-top: 2%;
 }
@@ -298,8 +304,7 @@ body {
 /* navigation */
 
 .allgoals {
-  padding: 50px 60px;
-  /* background: #f5f5f5; */
+  padding: 20px 55px;
   background-color: #ebfadc;
 }
 
@@ -313,36 +318,10 @@ body {
   display: inline-block;
   color: #333;
 }
-
-/* .line-title:before,
-  .line-title:after {
-    content: '';
-    height: 4px;
-    width: 50px;
-    background: #333;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  } */
-
-/* .line-title:before {
-    left: -60px;
-  }
-  
-  .line-title:after {
-    right: -60px;
-  }
-  .allgoals .custom-carousel{
-    margin: 5% 0;;
-    display: flex;
-    flex-wrap: wrap;
-    display: -webkit-flex;
-} */
-
 .allgoals .goal {
-  margin-left: 5%;
-  width: 520px;
-  height: 600px;
+  margin-left: 0%;
+  width: 500px;
+  height: 550px;
   display: flex;
   align-items: flex-end;
   -webkit-align-items: flex-end;
@@ -402,829 +381,432 @@ body {
 }
 
 /* responsive */
-
-@media only screen and (max-width: 2380px) {
-  .news {
-    height: 1050px;
-  }
-  .allnews {
-    gap: 2%;
+@media (max-width: 2070px) {
+  .allgoals .goal {
+    width: 450px;
+    height: 500px;
   }
 }
-@media only screen and (max-width: 2450px) {
-  .newsimage {
-    height: 60%;
+@media (max-width: 1920px) {
+  .allgoals .goal {
+    width: 425px;
+    height: 500px;
   }
-  .allnews {
-    gap: 3%;
+  .show-more-homepage {
+    font-size: 1.3rem;
+    width: 150px;
+    height: 60px;
+    border-radius: 15px;
   }
 }
-@media only screen and (max-width: 2132px) {
-  .news {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    margin-top: 5%;
-    height: 300px;
+@media (max-width: 1810px) {
+  .allgoals .goal {
+    width: 405px;
+    height: 500px;
   }
-
-  .newsinfo {
-    padding-left: 40px;
-  }
-
   #showless-homepage {
-    margin-top: 5%;
-  }
-  .newsimage {
-    width: 70%;
-    height: 100%;
-  }
-}
-@media (min-width: 2118px) and (max-width: 2146px) {
-  .allgoals .goal {
-    width: 500px;
-  }
-  .allgoals .goal.active {
-    width: 500px;
-  }
-}
-
-@media (min-width: 2098px) and (max-width: 2148px) {
-  .allgoals .goal {
-    width: 500px;
-  }
-  .allgoals .goal.active {
-    width: 500px;
-  }
-}
-/*  (min-width:1802px)  and   */
-@media (min-width: 1964px) and (max-width: 2097px) {
-  .allgoals .goal {
-    width: 450px;
-    height: 600px;
-  }
-  .allgoals .goal.active {
-    width: 450px;
-  }
-}
-@media (max-width: 1600px) {
-  .left {
-    font-size: 5rem;
-  }
-  .right {
-    display: none;
-  }
-  .newsinfo {
-    width: 80%;
     font-size: 1.3rem;
   }
-  .readmorebtn {
-    bottom: 10%;
-    /* width: ; */
-    width: 170px;
-    height: 50px;
-    font-size: 1.5rem;
-  }
-  .show-more-homepage {
-    width: 25%;
-  }
 }
-
-/* 1199px */
-
-/* (min-width:px)  */
-
-/* 1896 */
-@media (min-width: 1896px) and (max-width: 1964px) {
-  .homepage-backgroundimage {
-    height: 770px;
-  }
-  .left {
-    margin-top: 200px;
-    color: white;
-    font-weight: 500;
-    font-size: 3.5rem;
-  }
-
-  .right {
-    width: 40%;
-    color: white;
-    font-size: 2.1rem;
-    margin-top: 200px;
-  }
-
-  .susp {
-    font-size: 2.3rem;
-  }
-  .content {
-    font-size: 1.6rem;
-  }
-
-  .latestnews {
-    font-size: 3.5rem;
-  }
-
-  .allnews {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
-  }
-
-  .news {
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-    width: 25%;
-    height: 580px;
-    margin-top: 5%;
-    margin-left: 25px;
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .newsimage {
-    width: 100%;
-    height: 60%;
-  }
-
-  .newsimage:hover {
-    transform: scale(1.1);
-  }
-
-  .newsinfo {
-    padding-left: 20px;
-    padding-top: 30px;
-    height: 20%;
-    font-size: 1.2rem;
-    background-color: white;
-  }
-  .allgoals .goal {
-    width: 425px;
-    height: 550px;
-  }
-  .allgoals .goal.active {
-    width: 425px;
-  }
-  .line-title {
-    font-size: 2.5rem;
-  }
-
-  .readmorebtn {
-    width: 140px;
-    height: 40px;
-    padding-top: 10px;
-    font-size: 1.3rem;
-  }
-
+@media (max-width: 1730px) {
   .show-more-homepage {
     font-size: 1.5rem;
-    width: 13%;
+    width: 150px;
     height: 70px;
-  }
-  #showless-homepage {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1741px) and (max-width: 1895px) {
-  .allgoals .goal {
-    width: 400px;
-    height: 600px;
-  }
-  .goal-info {
-    font-size: 1.3rem;
-  }
-  .allgoals .goal.active {
-    width: 400px;
-  }
-}
-/* 1750 */
-
-@media (min-width: 1597px) and (max-width: 1740px) {
-  .allgoals .goal {
-    margin: 0 12px 60px;
-    width: 300px;
-    height: 430px;
-  }
-  .allgoals .goal-info {
-    font-size: 1rem;
-  }
-  .allgoals .goal.active {
-    /* width: 400px; */
-    width: 300px;
-  }
-  .homepage-backgroundimage {
-    height: 720px;
-  }
-  .left {
-    margin-top: 200px;
-    color: white;
-    font-weight: 500;
-    font-size: 3.2rem;
-  }
-
-  .right {
-    width: 40%;
-    color: white;
-    font-size: 2rem;
-    margin-top: 200px;
-  }
-
-  .susp {
-    font-size: 2.3rem;
-  }
-  .content {
-    font-size: 1.4rem;
-  }
-
-  .latestnews {
-    font-size: 3.5rem;
-  }
-
-  .allnews {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px;
-  }
-
-  .news {
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-    width: 25%;
-    height: 580px;
-    margin-top: 5%;
-    margin-left: 25px;
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .newsimage {
-    width: 100%;
-    height: 60%;
-  }
-
-  .newsimage:hover {
-    transform: scale(1.1);
-  }
-
-  .newsinfo {
-    padding-left: 20px;
-    padding-top: 30px;
-    height: 20%;
-    font-size: 1.2rem;
-    background-color: white;
-  }
-  .knoww {
-    margin-top: 30px;
-    width: 100px;
-    padding-top: 10px;
-    height: 35px;
-    border-radius: 15px;
-    padding-left: 13px;
-  }
-  .know-more {
-    font-size: 1rem;
-  }
-  .readmorebtn {
-    width: 140px;
-    height: 40px;
-    padding-top: 10px;
-    font-size: 1.3rem;
-  }
-
-  .show-more-homepage {
-    font-size: 1.3rem;
-    width: 13%;
-    height: 68px;
-  }
-  #showless-homepage {
-    font-size: 1.3rem;
-  }
-}
-
-/* 992 */
-@media (min-width: 1263px) and (max-width: 1599px) {
-  .homepage-backgroundimage {
-    height: 550px;
-  }
-  .left {
-    font-size: 2.8rem;
-    margin-top: 100px;
-  }
-  .susp {
-    font-size: 2.1rem;
-  }
-  .content {
-    font-size: 1.1rem;
-  }
-  .line-title {
-    font-size: 2rem;
-  }
-  .right {
-    display: none;
-  }
-  .news {
-    height: 170px;
-  }
-  .newsimage {
-    width: 60%;
-  }
-  .newsinfo {
-    width: 80%;
-    padding-left: 20px;
-    font-size: 1rem;
-  }
-  .readmorebtn {
-    bottom: 10%;
-    padding-top: 7px;
-    /* width: ; */
-    width: 125px;
-    height: 35px;
-    font-size: 1rem;
-  }
-  .latestnews {
-    font-size: 2.4rem;
-    text-shadow: none;
-  }
-  .show-more-homepage {
-    font-size: 1.1rem;
-    width: 12%;
-    height: 55px;
-  }
-  #showless-homepage {
-    font-size: 1.1rem;
-  }
-
-  .knoww {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 98px;
-    padding-top: 8px;
-    height: 33px;
-    border-radius: 15px;
-    box-shadow: #555;
-    padding-left: 16px;
-    background-color: #ebfadc;
-  }
-  .know-more {
-    font-size: 0.9rem;
-  }
-
-  .allgoals {
-    padding: 50px 30px;
+    border-radius: 14px;
   }
   .allgoals .goal {
-    margin: 0 12px 60px;
-    width: 300px;
-    height: 325px;
-  }
-  .allgoals .goal.active {
-    /* width: 400px; */
-    width: 300px;
-  }
-  .allgoals .goal-info {
-    font-size: 1rem;
-    transform: translateY(calc(100% - 46px));
-    -webkit-transform: translateY(calc(100% - 46px));
-  }
-}
-/* 768 */
-@media (min-width: 1000px) and (max-width: 1262px) {
-  .homepage-backgroundimage {
+    width: 390px;
     height: 450px;
   }
-  .left {
-    font-size: 2.8rem;
-    margin-top: 100px;
+  .news {
+    height: 600px;
+  }
+  .newsimage {
+    height: 55%;
+  }
+}
+@media (max-width: 1690px) {
+  .allgoals .goal {
+    width: 380px;
+    height: 450px;
   }
   .susp {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
+  }
+  .content {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1560px) {
+  .left {
+    font-size: 4rem;
+    margin-top: 250px;
+  }
+  .right {
+    font-size: 2rem;
+    margin-top: 250px;
+  }
+  .allgoals .goal {
+    width: 340px;
+    height: 425px;
+  }
+  .allgoals .goal-info {
+    font-size: 1.3rem;
+  }
+  .susp {
+    font-size: 2.3rem;
+  }
+  .content {
+    font-size: 1.3rem;
+  }
+  .line-title {
+    left: 40%;
+  }
+}
+@media (max-width: 1514px) {
+  .homepage-backgroundimage {
+    height: 700px;
+  }
+  .left {
+    margin-top: 150px;
+    max-height: 200px;
+  }
+  .right {
+    position: relative;
+    /* margin-left: 100px; */
+    margin-top: 250px;
+    font-size: 1.5rem;
+  }
+  .show-more-homepage {
+    font-size: 1.1rem;
+    height: 50px;
+    font-weight: 500;
+  }
+  #showless-homepage {
+    font-size: 1.1rem;
+    height: 50px;
+    font-weight: 500;
+  }
+  .allnews {
+    gap: 50px;
+  }
+  .news {
+    width: 28%;
+  }
+  .readmorebtn {
+    font-size: 1.2rem;
+    width: 130px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1470px) {
+  .left {
+    font-size: 3.3rem;
+  }
+
+  .latestnews {
+    font-size: 3rem;
+    margin-bottom: 0px;
+    text-shadow: none;
+  }
+  .allgoals .goal {
+    width: 300px;
+    height: 380px;
+  }
+  .susp {
+    font-size: 2rem;
   }
   .content {
     font-size: 1.1rem;
   }
-  .line-title {
-    font-size: 2rem;
+  .allgoals .goal-info {
+    font-size: 1rem;
   }
-  .right {
-    display: none;
+  .knoww {
+    height: 30px;
+    width: 100px;
+    padding-top: 5px;
+    padding-left: 15px;
+    border-radius: 10px;
+  }
+  .know-more {
+    font-size: 0.95rem;
+  }
+  .allnews {
+    gap: 100px;
   }
   .news {
-    height: 170px;
-  }
-  .newsimage {
-    width: 60%;
+    height: 450px;
+    width: 25%;
   }
   .newsinfo {
-    width: 80%;
-    padding-left: 20px;
     font-size: 1rem;
   }
   .readmorebtn {
-    bottom: 10%;
+    font-size: 0.9rem;
+    width: 100px;
+    height: 30px;
     padding-top: 7px;
-    /* width: ; */
-    width: 125px;
-    height: 35px;
-    font-size: 1rem;
   }
+}
+@media (max-width: 1338px) {
+  .allgoals .goal {
+    width: 300px;
+    height: 400px;
+  }
+}
+@media (max-width: 1300px) {
+  .line-title {
+    margin-left: 0%;
+    text-align: left;
+  }
+  .allgoals .goal {
+    width: 270px;
+    height: 370px;
+  }
+}
+@media (max-width: 1350px) {
   .latestnews {
-    font-size: 2.4rem;
+    font-size: 3rem;
     text-shadow: none;
   }
-  .show-more-homepage {
-    font-size: 1.1rem;
-    width: 12%;
-    height: 55px;
-    border-radius: 10px;
+  .newsinfo {
+    padding-left: 10px;
+    padding-top: 20px;
+    font-size: 1rem;
+  }
+  .allnews {
+    gap: 60px;
+  }
+  .news {
+    height: 480px;
+    width: 27%;
+  }
+  .newsimage {
+    width: 100%;
+    height: 60%;
+    /* width: 60%;
+      height: 100%; */
   }
   #showless-homepage {
-    font-size: 1.1rem;
+    /* position: fixed; */
+    width: 125px;
+    font-size: 1rem;
+    font-weight: 600;
+    left: 3%;
+    margin-right: 0%;
   }
-
-  .knoww {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 98px;
-    padding-top: 8px;
-    height: 33px;
-    border-radius: 15px;
-    box-shadow: #555;
-    padding-left: 16px;
-    background-color: #ebfadc;
+}
+@media (max-width: 1200px) {
+  .line-title {
+    left: 36%;
+  }
+  .homepage-backgroundimage {
+    height: 600px;
+  }
+  .left {
+    font-size: 3rem;
+  }
+  /* .left{
+      margin-top: 150px;
+      font-size: 3.5rem;
+  } */
+  /* .right{
+      display: none;
+  } */
+  .allgoals .goal {
+    width: 300px;
+  }
+  .allgoals .goal-info {
+    font-size: 1.12rem;
+  }
+  .allnews {
+    gap: 50px;
+  }
+  .news {
+    height: 430px;
+    width: 28%;
+  }
+  .newsinfo {
+    font-size: 0.9rem;
   }
   .know-more {
     font-size: 0.9rem;
   }
-
-  .line-title {
-    width: 330px;
-    text-align: left;
-  }
-  .allgoals {
-    padding: 50px 30px 40px;
-  }
-  .allgoals .goal {
-    margin: 0 12px 60px;
-    width: 290px;
-    /* width: 360px; */
-    height: 350px;
-  }
-  .allgoals .goal.active {
-    width: 290px;
-  }
-  .allgoals .goal-info {
-    font-size: 1rem;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
+  .knoww {
+    height: 30px;
+    width: 90px;
+    padding-top: 2px;
   }
 }
-/* 767 */
-@media (max-width: 1160px) {
-  .homepage-backgroundimage {
-    height: 400px;
-  }
-  .susp {
-    font-size: 2rem;
-  }
-  .content {
-    font-size: 1rem;
-  }
-  .line-title {
-    text-align: left;
-    width: 250px;
-  }
-  .allgoals {
-    padding: 30px 15px 20px;
-  }
-  .allgoals .goal {
-    margin: 0 10px 40px;
-    /* width: 200px; */
-    width: 280px;
-    height: 350px;
-  }
-  .allgoals .goal.active {
-    width: 280px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
-  }
-  .allgoals .goal-info {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-
-    font-size: 1.1rem;
-  }
-  @media (max-width: 1818px) {
-    .goal-info {
-      font-size: 1.3rem;
-    }
-  }
-}
-
 @media (max-width: 1000px) {
+  .homepage-backgroundimage {
+    height: 500px;
+  }
   .left {
-    font-size: 2rem;
-    margin-top: 50px;
-  }
-  .susp {
-    font-size: 2.2rem;
-    /* font-size: 2rem; */
-    padding-top: 0;
-    /* margin-top: 2%; */
-  }
-  .content {
-    font-size: 1rem;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  .line-title {
-    left: 20%;
-    font-size: 2rem;
-  }
-  .allgoals .goal {
-    margin-left: 12%;
-  }
-  .latestnews {
     font-size: 3rem;
-    padding-bottom: 0px;
-    margin-bottom: 5px;
+    margin-top: 100px;
   }
   .latest {
-    height: auto;
-  }
-  .allnews {
     width: 100%;
-    gap: 50px;
-    /* height: 400px; */
+  }
+  .sustainability {
+    width: 100%;
   }
   .news {
-    height: 190px;
-    margin-top: 5%;
+    height: 170px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+  }
+  .newsimage {
+    height: 100%;
   }
   .newsinfo {
-    font-size: 0.8rem;
-    padding-left: 15px;
-    padding-top: 20px;
-  }
-  .readmorebtn {
-    font-size: 0.8rem;
-    height: 25px;
-    width: 100px;
-    padding-top: 5px;
-    border-radius: 10px;
-  }
-  .show-more-homepage {
-    font-size: 0.8rem;
-    height: 5.5vh;
-    border-radius: 20px;
-  }
-  #showless-homepage {
-    font-size: 0.8rem;
-  }
-  .allgoals .goal {
-    width: 250px;
-    height: 290px;
+    margin-right: 60px;
+    padding-left: 30px;
   }
 }
-@media (max-width: 750px) {
-  .homepage-backgroundimage {
-    height: 250px;
+@media (max-width: 1100px) {
+  .line-title {
+    left: 35%;
   }
+  .newsimage {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
   .left {
-    font-size: 1.4rem;
-  }
-  .susp {
-    font-size: 1.3rem;
-    padding-top: 0;
-    /* margin-top: 2%; */
-  }
-  .content {
-    font-size: 0.6rem;
-    margin-top: 0px;
-    padding-top: 0px;
+    font-size: 3rem;
   }
   .line-title {
-    margin-left: 16%;
-    font-size: 1.3rem;
+    left: 35%;
   }
+
   .allgoals .goal {
-    margin-left: 20%;
-    width: 200px;
-    height: 220px;
+    margin-left: 150px;
+    width: 370px;
   }
-  .allgoals .goal.active {
-    width: 200px;
-    /* height: 290px; */
-  }
-  .allgoals .goal-info {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-    font-size: 0.6rem;
-  }
-  .knoww {
-    width: 55px;
-    height: 20px;
-    padding-left: 4%;
-    padding-top: 5px;
-    border-radius: 7px;
-  }
-  .know-more {
-    font-size: 0.5rem;
-  }
-  .show-more-homepage {
-    height: 30px;
-    border-radius: 10px;
-  }
-  .latestnews {
-    font-size: 1.7rem;
-    text-shadow: none;
-  }
-  .newsinfo {
-    font-size: 0.5rem;
-  }
-  .news {
-    height: 110px;
-  }
-  .readmorebtn {
-    bottom: 10%;
-    padding-top: 7px;
-    /* width: ; */
-    width: 68px;
-    height: 17px;
-    font-size: 0.46rem;
-  }
-  .show-more-homepage {
-    font-size: 0.6rem;
-    width: 87px;
-  }
-  #showless-homepage {
-    font-size: 0.6rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .susp {
-    font-size: 1.3rem;
-    padding-top: 0;
-    /* margin-top: 2%; */
-  }
-  .content {
-    margin-top: 0;
-    font-size: 0.7rem;
-    padding-top: 0;
-  }
-  .line-title {
-    margin-left: 4%;
-  }
-  .allgoals .goal {
-    margin-left: 11%;
-    width: 200px;
-    height: 200px;
-  }
-  .allgoals .goal.active {
-    width: 200px;
-    /* height: 290px; */
-  }
-  .allgoals .goal-info {
-    padding: 0 14px 5px;
-    transform: translateY(calc(100% - 42px));
-    -webkit-transform: translateY(calc(100% - 42px));
-    font-size: 0.7rem;
-  }
-  .knoww {
-    width: 80px;
-    height: 23px;
-    padding-left: 4%;
-    padding-top: 8px;
-  }
-  .know-more {
-    font-size: 0.8rem;
-  }
-  .show-more-homepage {
-    height: 30px;
-    border-radius: 10px;
-  }
-  .latestnews {
-    font-size: 2rem;
-    text-shadow: none;
-  }
-  .newsinfo {
-    font-size: 0.5rem;
-  }
-  .news {
-    height: 130px;
-  }
-  .readmorebtn {
-    bottom: 10%;
-    padding-top: 5px;
-    /* width: ; */
-    width: 75px;
-    height: 20px;
-    font-size: 0.6rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .line-title {
-    font-size: 1.2rem;
-    margin-left: 16%;
-    text-align: left;
-  }
-  .allgoals .goal {
-    margin-left: 10%;
-    width: 180px;
-    height: 200px;
-  }
-  .allgoals .goal.active {
-    margin-left: 10%;
-    width: 180px;
-    height: 200px;
-  }
-
-  .goal .goal-info {
-    font-size: 0.6rem;
-  }
-  .susp {
-    font-size: 1rem;
-    padding-top: 0;
-    /* margin-top: 2%; */
-  }
-  .content {
-    font-size: 0.6rem;
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  .knoww {
-    width: 65px;
-    height: 22px;
-    padding-top: 6px;
-    padding-left: 6%;
-  }
-  .know-more {
-    font-size: 0.6rem;
-  }
-  .news {
-    height: 100px;
+  .latest {
+    width: 100%;
   }
   .newsimage {
     width: 60%;
   }
-  .newsinfo {
-    padding-top: 10px;
-    padding-left: 8px;
-    font-size: 0.4rem;
+  .news {
+    height: 180px;
   }
-  .latestnews {
-    text-shadow: none;
-    font-size: 1.5rem;
+  .newsinfo {
+    padding-left: 10px;
+    padding-top: 25px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .line-title {
+    left: 39%;
+    font-size: 2.1rem;
+  }
+  .allgoals .goal {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 850px) {
+  .allgoals .goal {
+    margin-left: 50px;
+  }
+  .news {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 670px) {
+  .allgoals .goal {
+    margin-left: 30px;
+  }
+  .right {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .news {
+    width: 100%;
+  }
+  .newsinfo {
+    font-size: 1rem;
   }
   .readmorebtn {
-    font-size: 0.5rem;
-    height: 17px;
-    width: 60px;
-    padding-top: 5px;
-    border-radius: 5px;
+    font-size: 0.9rem;
+    height: 33px;
+    width: 100px;
   }
-  .show-more-homepage {
-    border-radius: 5px;
-    font-size: 0.6rem;
+}
+@media (max-width: 600px) {
+  .line-title {
+    left: 30%;
   }
-
-  #showless-homepage {
-    font-size: 0.5rem;
-    border-radius: 5px;
+  .allgoals .goal {
+    margin-left: 40px;
+    width: 300px;
   }
-  /* .knoww {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    width: 150px;
-    padding-top: 10px;
-    height: 50px;
-    border-radius: 15px;
-    box-shadow: #555;
-    padding-left: 35px;
-    background-color: #EBFADC;
+  .knoww {
+    height: 30px;
+    width: 100px;
+    padding-left: 20px;
+  }
+  .know-more {
+    font-size: 0.9rem;
+  }
 }
 
-.knoww:hover {
-    background-color: #053909;
+/* darkmode */
+/* Home.css  */
+
+.homepage-main-container.dark-mode {
+  background-color: rgb(1, 40, 1);
+  /* background-color: #033705; */
+  color: #ffffff;
 }
-.knoww:hover .know-more{
-        color: white;
+.dark-mode .sustainability {
+  background-color: #033410;
 }
 
-.know-more {
-    text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
+.homepage-backgroundimage.dark-mode {
+  background-color: #033410;
+  color: #ffffff;
+  top: 0px;
+  padding-top: 0px;
 }
- */
+.dark-mode .line-title {
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 500;
 }
+.dark-mode .allgoals {
+  background-color: #033410;
+}
+.dark-mode .latest {
+  background-color: #033410;
+}
+.dark-mode .news {
+  background-color: #173f06;
+  box-shadow: #033410 0px 10px 20px, #033410 0px 6px 6px;
+}
+.dark-mode .newsinfo {
+  background-color: #173f06;
+}
+.dark-mode .show-more-homepage {
+  color: white;
+  background-color: black;
+  box-shadow: none;
+  border-radius: 10px;
+}
+.dark-mode .show-more-homepage:hover {
+  background-color: #033410;
+}
+
+/* Define other dark mode styles as needed */

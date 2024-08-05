@@ -141,3 +141,11 @@
   background-color: rgb(172, 220, 116);
   border: none;
 }
+
+.quiz-hero-section {
+  height: 100vh;
+  background-image: url("./images/organic-flat-people-asking-questions.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
