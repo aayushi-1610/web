@@ -39,7 +39,8 @@ const Line = styled.div`
 `;
 
 const MainContainer = styled.div`
-  margin-top: 6.25rem; /* 100px */
+  margin-top: 0rem; /* 100px */
+  margin-bottom:-10%;
   height:140vh;
   width: 100%;
   display: flex;

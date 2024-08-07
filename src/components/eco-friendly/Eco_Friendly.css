@@ -1,1 +1,67 @@
+.three-d-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3498db;
+    position: relative;
+  }
+  
+  .three-d-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0.1em;
+    color: #2980b9;
+    z-index: -1;
+    transform: translate(2px, 2px);
+  }
+  
+  .highlight-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    background: #f39c12;
+    padding: 5px 10px;
+    display: inline-block;
+  }
 
+  .elegant-gold-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4af37;
+    font-family: 'Poppins';
+    text-shadow: 1px 1px 2px #b8860b;
+    text-align: center;
+    margin-top: 5%;
+    @media(max-width:500px)
+    {
+        margin-top:13%;
+    }
+  }
+
+  .fancy-script-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000080;
+    font-family: 'Brush Script MT', cursive;
+    position: relative;
+  }
+  
+  .fancy-script-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #000080;
+    bottom: -5px;
+    left: 0;
+  }
+
+  .Title2{
+    margin-top:7%;
+    margin-bottom: -8%;
+    @media(max-width:768px)
+    {
+        margin-bottom: -3.5%;
+    }
+
+  }
