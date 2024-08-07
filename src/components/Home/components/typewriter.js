@@ -30,4 +30,3 @@ const TypewriterEffect = ({ text, breaktext }) => {
 };
 
 export default TypewriterEffect;
-5d4ce1fdebef0e0e1725ec4aee33

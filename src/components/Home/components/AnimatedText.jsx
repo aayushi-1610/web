@@ -53,6 +53,4 @@ const Reveal = ({ children }) => {
 };
 
 export default Reveal;
-al;
 
->>>>>>> e423b184036e5d4ce1fdebef0e0e1725ec4aee33

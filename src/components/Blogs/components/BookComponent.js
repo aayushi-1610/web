@@ -6,9 +6,10 @@ import styled from "styled-components";
 const Box = styled(motion.a)`
 font-family:Poppins !important;
   background-color: #ebfadc;
-  width: 80%;
+
+width: 80%;
   text-decoration: none;
-  height: 20rem;
+  height: 25rem;
   padding: 1rem;
   color: black;
   backdrop-filter: blur(2px);
@@ -19,7 +20,7 @@ font-family:Poppins !important;
   flex-direction: column;
   z-index: 5;
 
-  &:hover {
+ &:hover {
     color: ${(props) => props.theme.body};
     background-color:rgba(219, 245, 193);
     transition: all 0.3s ease;
@@ -32,8 +33,9 @@ font-family:Poppins !important;
 
   }
        @media(max-width: 1000){
-    width:30%;
+    width:50%;
   }
+
 `;
 
 const Image = styled.div`
@@ -47,9 +49,8 @@ const Image = styled.div`
 `;
 const Title = styled.h3`
   color: inherit;
-  padding: 0.5rem 0;
+  padding: 0.2rem 0;
   padding-top: 1rem;
-  font-family: "Karla", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${(props) => props.theme.text};
 
@@ -82,18 +83,20 @@ const Item = {
   },
 };
 
-const BlogComponent = (props) => {
-  const { name, date, imgSrc, link } = props.blog;
+const BookComponent = (props) => {
+  const { name, about, imgSrc, link } = props.book;
   return (
     <Container variants={Item}>
-      <Box target="_blank" href={`${link}`}>
+      <Box>
         <Image img={imgSrc} />
         <Title>{name}</Title>
-
-        <Date>{date}</Date>
+        <p style={{fontSize:'12px'}}>{about}</p>
+        <a href={`${link}`} download={name}>
+        Download PDF
+      </a>
       </Box>
     </Container>
   );
 };
 
-export default BlogComponent;
+export default BookComponent;

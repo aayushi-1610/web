@@ -13,6 +13,7 @@ import LoginMessage from "./components/Alert/Alert";
 import About from "./components/About/About";
 import ContactUs from "./components/Contact/Contact";
 import "./App.css";
+import EcoFriendly from "./components/eco-friendly/Eco_Friendly";
 
 function App() {
   const [Username, setUsername] = useState("");
@@ -96,6 +97,9 @@ function App() {
           </Route>
           <Route path="/Contact">
             <ContactUs />
+          </Route>
+          <Route path="/Eco-Friendly">
+          <EcoFriendly/>
           </Route>
         </Switch>
         <Footer />

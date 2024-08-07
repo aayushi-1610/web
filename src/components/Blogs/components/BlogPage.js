@@ -1,97 +1,210 @@
-
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import img from "../assets/Images/background-img.jpg"
-import {Blogs} from '../data/BlogData';
-import BlogComponent from './BlogComponent'
-import AnchorComponent from '../subComponents/Anchor'
-import { motion } from 'framer-motion'
-
-import Map from "./Map";
+// BlogPage.js
+import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import styled from 'styled-components';
+import { Blogs } from '../data/BlogData';
+import BlogComponent from './BlogComponent';
+import { motion } from 'framer-motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import TypewriterEffect from './AnimatedLetters';
+import { Books } from '../data/Books';
+import BookComponent from './BookComponent';
+import { PrevArrow, NextArrow } from './../subComponents/CustomArrows'; // Import the custom arrows
+import Map from "./Map.js"
 const MainContainer = styled(motion.div)`
-background-image: url(${img});
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-`
+  background-color: white;
+  font-family:Poppins !important;
+`;
+
 const Container = styled.div`
-background-color: ${props => `rgba(${props.theme.bodyRgba},0.3)`};
-width: 100%;
-height:auto;
-position: relative;
-padding-bottom: 5rem;
-`
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: 4rem;
+`;
 
 const Center = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+`;
+
+const Heading = styled(motion.div)`
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-size: 4rem;
+  font-family: 'Times New Roman', serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+`;
+
+const SliderContainer = styled(Slider)`
+  width: 75%;
+  margin: 0 auto;
+  padding: 0 50px; // Ensure space for arrows
+`;
+
+const Line=styled.div`
+height:1px;
+width:10%;
+background-color:black;
+margin-left:1rem;
+margin-right:1rem;
+
+
 `
 
-const Grid = styled.div`
-display: grid;
-grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-grid-gap: calc(1rem + 2vw);
-`
+const EbookContainer = styled(motion.div)`
+  width: 100%;
+  margin: 0 auto;
+`;
 
-// Framer-motion config
-const container = {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+      duration: 0.25,
+    },
+  },
+};
 
-    hidden: {opacity:0},
-    show: {
-      opacity:1,
-  
-      transition:{
-        staggerChildren: 0.5,
-        duration: 0.5,
-      }
-    }
-  
-  }
+const headingVariants = {
+  hidden: { opacity: 0, transform: 'translateY(50px)' },
+  show: { opacity: 1, transform: 'translateY(0)' },
+};
 
 const BlogPage = () => {
+  const [isEbooksVisible, setIsEbooksVisible] = useState(false);
+  const [isEbooksSliderVisible, setIsEbooksSliderVisible] = useState(false);
+  const [hasEbooksTextRendered, setHasEbooksTextRendered] = useState(false);
+  const ebooksRef = useRef(null);
 
-    const [numbers, setNumbers] = useState(0);
+  const settings = useMemo(() => ({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  }), []);
 
-    useEffect(() => {
-        let num = (window.innerHeight - 70)/30;
-        setNumbers(parseInt(num));
-    }, [])
+  const debounce = useCallback((func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }, []);
 
+  const checkVisibility = useCallback(() => {
+    if (ebooksRef.current) {
+      const rect = ebooksRef.current.getBoundingClientRect();
+      const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
+      setIsEbooksVisible(isInView);
+      if (isInView) {
+        setIsEbooksSliderVisible(true);
+      }
+    }
+  }, []);
 
-    return (
-        <>
-        <MainContainer
-        variants={container}
-        initial='hidden'
-        animate='show'
-        exit={{
-            opacity:0, transition:{duration: 0.5}
-        }}
-        >
-            <Map/>
+  useEffect(() => {
+    const handleScroll = debounce(checkVisibility, 100);
+    window.addEventListener('scroll', handleScroll);
+    checkVisibility();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [checkVisibility, debounce]);
+
+  return (
+    <MainContainer
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+      exit={{ opacity: 0, transition: { duration: 0.25 } }}
+    >
+      <Container>
+        <Center>
+          <Heading
+            variants={headingVariants}
+            initial="hidden"
+            animate="show"
+          >
+            <TypewriterEffect text="Eco Insights.." />
+          </Heading>
+        </Center>
+      </Container>
+
+      <Container>
+        <Center>
+          <SliderContainer {...settings}>
+            {Blogs.map((blog) => (
+              <BlogComponent key={blog.id} blog={blog} />
+            ))}
+          </SliderContainer>
+        </Center>
+      </Container>
+
+      <Container ref={ebooksRef}>
+        <Center>
+          <Heading
+            variants={headingVariants}
+            initial="hidden"
+            animate={isEbooksVisible ? 'show' : 'hidden'}
+          >
+            {isEbooksVisible && !hasEbooksTextRendered && (
+              <TypewriterEffect text="Eco-Books.." onComplete={() => setHasEbooksTextRendered(true)} />
+            )}
             
-            <Container>
-                
-                <AnchorComponent number={numbers}/>
-<Center>
-<Grid>
+          </Heading>
+        </Center>
+      </Container>
 
-{
-    Blogs.map(blog => {
-        return <BlogComponent key={blog.id} blog={blog} />
-    })
-}
-</Grid>
+      <Container>
+        <Center>
+          {isEbooksSliderVisible && (
+            <EbookContainer variants={containerVariants} initial="hidden" animate="show">
+              <SliderContainer {...settings}>
+                {Books.map((book) => (
+                  <BookComponent key={book.id} book={book} />
+                ))}
+              </SliderContainer>
+            </EbookContainer>
+          )}
+        </Center>
+      </Container>
+      <Map/>
+    </MainContainer>
+  );
+};
 
-</Center>
-
-            </Container>
-        </MainContainer>
-        </>
-    )
-}
-
-export default BlogPage
+export default BlogPage;
